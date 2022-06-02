@@ -27,18 +27,27 @@
 # d = float(input("Укажите точность: "))
 # print(round(math.pi-d, get_count(d)))
 
-#Задание 3 Составить список простых множителей натурального числа N
-a = int(input("Введите число: "))
-prim = []
-def is_primal(chislo):
-    k = 0
-    for i in range(2, chislo//2 + 1):
-        if (chislo % i == 0):
-            k = k+1
-    if (k <= 0):
-        prim.append(chislo)
-for i in range(1,a+1):
-    if a%i==0:
-        is_primal(i)
-print(prim)
+# #Задание 3 Составить список простых множителей натурального числа N
+# a = int(input("Введите число: "))
+# prim = []
+# def is_primal(chislo):
+#     k = 0
+#     for i in range(2, chislo//2 + 1):
+#         if (chislo % i == 0):
+#             k = k+1
+#     if (k <= 0):
+#         prim.append(chislo)
+# for i in range(1,a+1):
+#     if a%i==0:
+#         is_primal(i)
+# print(prim)
 
+#Задание 4 Дана последовательность чисел. Получить список неповторяющихся элементов исходной последовательности
+a = [1, 2, 3, 5, 1, 5, 3, 10]
+nuzhiy = []
+a = sorted(a)
+nuzhiy.append(a[0])
+for i in range(len(a)-1):
+    if a[i] != a[i+1]:
+        nuzhiy.append(a[i+1])
+print(nuzhiy) 
