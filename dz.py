@@ -13,3 +13,16 @@
 #     a, b = b, a
 # nok = int(min_common_divisor(a, b))
 # print(f"Наименьшее общее кратное {a} и {b} равно {nok}.")
+
+#Задание 2: Вычислить число Пи c заданной точностью d
+import math
+import decimal
+def get_count(number):
+    s = str(number)
+    if '.' in s:
+        return abs(s.find('.') - len(s)) - 1
+    else:
+        return 0
+
+d = float(input("Укажите точность: "))
+print(round(math.pi-d, get_count(d)))
