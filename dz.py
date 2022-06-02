@@ -42,12 +42,21 @@
 #         is_primal(i)
 # print(prim)
 
-#Задание 4 Дана последовательность чисел. Получить список неповторяющихся элементов исходной последовательности
-a = [1, 2, 3, 5, 1, 5, 3, 10]
-nuzhiy = []
-a = sorted(a)
-nuzhiy.append(a[0])
-for i in range(len(a)-1):
-    if a[i] != a[i+1]:
-        nuzhiy.append(a[i+1])
-print(nuzhiy) 
+# #Задание 4 Дана последовательность чисел. Получить список неповторяющихся элементов исходной последовательности
+# a = [1, 2, 3, 5, 1, 5, 3, 10]
+# nuzhiy = []
+# a = sorted(a)
+# nuzhiy.append(a[0])
+# for i in range(len(a)-1):
+#     if a[i] != a[i+1]:
+#         nuzhiy.append(a[i+1])
+# print(nuzhiy) 
+
+#Задание 5 Дан текстовый файл, содержащий целые числа. Удалить из него все четные числа. 
+import random
+
+count = 0
+with open('file.txt', 'w') as data:
+    for i in range(random.randint(3,10)):
+        data.write(f"{random.randint(10,100)}\n")
+            
