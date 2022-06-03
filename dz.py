@@ -55,8 +55,19 @@
 #Задание 5 Дан текстовый файл, содержащий целые числа. Удалить из него все четные числа. 
 import random
 
-count = 0
+chisla = []
 with open('file.txt', 'w') as data:
     for i in range(random.randint(3,10)):
-        data.write(f"{random.randint(10,100)}\n")
+        rand_num = random.randint(10,100) #можно было сделать легче, но это для проверки
+        data.write(f"{rand_num}\n")
+        print(rand_num, end= ' ')
+with open('file.txt', 'r') as data:
+    for line in data:
+        line.replace('\n','')
+        if int(line)%2!=0:
+            chisla.append(line)
+with open('file.txt', 'w') as data:
+    for i in range(len(chisla)):
+        data.write(chisla[i])
+
             
